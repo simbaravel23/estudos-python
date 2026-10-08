@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulos Random e Datetime</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        h2 {
+            color: #d32f2f;
+            text-align: center;
+        }
+        .card {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background-color: #fafafa;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #b71c1c;
+        }
+        .resultado {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Módulos Padrão</h2>
+
+        <!-- Seção Random -->
+        <div class="card">
+            <h3>Módulo Random</h3>
+            <p>Gera um número inteiro aleatório entre 1 e 10.</p>
+            <button onclick="gerarNumeroAleatorio()">Gerar Número</button>
+            <div id="res-random" class="resultado">---</div>
+        </div>
+
+        <!-- Seção Datetime -->
+        <div class="card">
+            <h3>Módulo Datetime</h3>
+            <p>Obtém a data e a hora atual do sistema.</p>
+            <button onclick="mostrarDataAtual()">Mostrar Data/Hora</button>
+            <div id="res-datetime" class="resultado">---</div>
+        </div>
+    </div>
+
+    <script>
+        // Equivalente ao random.randint(1, 10) do Python
+        function gerarNumeroAleatorio() {
+            let numeroAleatorio = Math.floor(Math.random() * 10) + 1;
+            document.getElementById("res-random").innerText = `Número: ${numeroAleatorio}`;
+        }
+
+        // Equivalente ao datetime.datetime.now() do Python
+        function mostrarDataAtual() {
+            let dataAtual = new Date();
+            // Formata para o padrão local legível
+            document.getElementById("res-datetime").innerText = dataAtual.toLocaleString('pt-BR');
+        }
+    </script>
+
+</body>
+</html>
