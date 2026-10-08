@@ -1,6 +1,6 @@
 número = 7 
-se número % 2 == 0:
+se número % 2 == 0: # type: ignore
 
 resultado = "Par"
-señao:
-     resultado = "Impar"
+senão:
+resultado = "Impar"
