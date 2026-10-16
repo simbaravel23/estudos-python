@@ -6,7 +6,7 @@ idade = 28
 nome = "Giovanna"
 
 # Exibe os valores atuais das variáveis nome e idade
-print(nome, idade)  # Saída no terminal: Giovanna 28[cite: 3]
+print(nome, idade)  # Saída no terminal: Giovanna 28
 
 # Exemplo de variável com padrão de nomenclatura de constante (letras maiúsculas)
 limite_saque_diario = 1000
@@ -18,4 +18,4 @@ BRAZILIAN_STATES = ["SP", "RJ", "SC", "RS"]
 BRAZILIAN_STATES = 10
 
 # Exibe o valor atual da variável BRAZILIAN_STATES
-print(BRAZILIAN_STATES)  # Saída no terminal: 10[cite: 3]
+print(BRAZILIAN_STATES)  # Saída no terminal: 10
